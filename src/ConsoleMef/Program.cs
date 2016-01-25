@@ -22,6 +22,7 @@ namespace ConsoleMef
                 Test3(container);
                 Test4(container);
                 Test5(container);
+                Test6(container);
             }
             catch (System.Exception ex)
             {
@@ -37,15 +38,17 @@ namespace ConsoleMef
         {
             var builder = new RegistrationBuilder();
             builder.ForType(typeof(ManualTest)).Export();
+            builder.ForType(typeof(ILogger)).Export();
 
             var catalog = new AggregateCatalog();
-
-
+            
             // 現在実行中のアセンブリフォルダからカタログを作成
             catalog.Catalogs.Add(new AssemblyCatalog(Assembly.GetExecutingAssembly(), builder));
-            
+
+            var logProvider = new LogExportProvider();
+
             // 現在実行中のアセンブリのカタログを元にコンテナを作る
-            return new CompositionContainer(catalog);
+            return new CompositionContainer(catalog, logProvider);
         }
 
         /// <summary>
@@ -104,6 +107,15 @@ namespace ConsoleMef
             var type1 = container.GetExportedValue<ManualTest>();
             type1.Execute();
         }
-        
+
+        /// <summary>
+        /// ExportProvider
+        /// </summary>
+        /// <param name="container"></param>
+        private static void Test6(CompositionContainer container)
+        {
+            var type1 = container.GetExportedValue<LoggerTest>();
+            type1.WriteLog();
+        }
     }
 }

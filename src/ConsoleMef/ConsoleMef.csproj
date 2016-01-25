@@ -46,12 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\LogImportAttribute.cs" />
     <Compile Include="Export1.cs" />
     <Compile Include="Export2.cs" />
+    <Compile Include="ILogger.cs" />
+    <Compile Include="LogExportProvider.cs" />
     <Compile Include="Import1.cs" />
     <Compile Include="IManyTest.cs" />
     <Compile Include="ITest2.cs" />
     <Compile Include="ITest1.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="LoggerTest.cs" />
     <Compile Include="ManualTest.cs" />
     <Compile Include="ManyExport2.cs" />
     <Compile Include="ManyExport1.cs" />
@@ -62,6 +67,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
