@@ -10,7 +10,6 @@ namespace ConsoleMef
     [Export]
     public class Import1
     {
-
         [Import("test")]
         public ITest1 Ex1
         {

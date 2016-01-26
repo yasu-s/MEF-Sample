@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfMef", "WpfMef\WpfMef.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleMef", "ConsoleMef\ConsoleMef.csproj", "{8F68DCB0-E36F-471C-8D9A-383CE315E676}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleMef2", "ConsoleMef2\ConsoleMef2.csproj", "{8D124B10-A8B3-43EE-9E9D-01059F0203E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8F68DCB0-E36F-471C-8D9A-383CE315E676}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F68DCB0-E36F-471C-8D9A-383CE315E676}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F68DCB0-E36F-471C-8D9A-383CE315E676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D124B10-A8B3-43EE-9E9D-01059F0203E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D124B10-A8B3-43EE-9E9D-01059F0203E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D124B10-A8B3-43EE-9E9D-01059F0203E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D124B10-A8B3-43EE-9E9D-01059F0203E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
