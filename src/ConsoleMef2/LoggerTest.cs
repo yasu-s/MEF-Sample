@@ -10,6 +10,9 @@ namespace ConsoleMef2
     [Export]
     public class LoggerTest
     {
+        /// <summary>
+        /// <see cref="ImportingConstructorAttribute"/>テスト1
+        /// </summary>
         [Import]
         [ImportMetadataConstraint("LogType", "Trace")]
         public ILogger TraceLogger
@@ -17,6 +20,9 @@ namespace ConsoleMef2
             get; set;
         }
 
+        /// <summary>
+        /// <see cref="ImportingConstructorAttribute"/>テスト2
+        /// </summary>
         [Import]
         [ImportMetadataConstraint("LogType", "Error")]
         public ILogger ErrorLogger
@@ -24,6 +30,9 @@ namespace ConsoleMef2
             get; set;
         }
 
+        /// <summary>
+        /// <see cref="LogImportAttribute"/>テスト
+        /// </summary>
         [LogImport("Debug")]
         public ILogger DebugLogger
         {
@@ -40,6 +49,16 @@ namespace ConsoleMef2
         public ITest Test2
         {
             get; set;
+        }
+
+        /// <summary>
+        /// <see cref="OnImportsSatisfiedAttribute"/>テスト <br/>
+        /// Import完了時に実行されます。
+        /// </summary>
+        [OnImportsSatisfied]
+        public void OnImportsSatisfied()
+        {
+            DebugLogger.WriteInfo("LoggerTest - OnImportsSatisfied");
         }
 
         /// <summary>
