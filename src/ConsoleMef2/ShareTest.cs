@@ -7,19 +7,27 @@ using System.Composition;
 
 namespace ConsoleMef2
 {
-    [Export("test1", typeof(ITest))]
-    public class ExportTest1 : ITest
+    [Export]
+    public class ShareTest
     {
-        [LogImport("Debug"), SharingBoundary("SharedTest")]
-        public ILogger DebugLogger
+
+        [Import]
+        public ShareChild Child
         {
             get;
             set;
         }
 
-        public string GetName()
+        [Import]
+        public ShareParent Parent
         {
-            return "ExportTest1";
+            get;
+            set;
+        }
+
+        public void Exec()
+        {
+            
         }
     }
 }

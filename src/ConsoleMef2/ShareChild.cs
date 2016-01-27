@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Composition;
 
 namespace ConsoleMef2
 {
-    public interface ITest
+    [Export, Shared(Scope.Request)]
+    public class ShareChild
     {
-        ILogger DebugLogger
+        public string Memo
         {
             get;
             set;
         }
-        
-        string GetName();
     }
 }

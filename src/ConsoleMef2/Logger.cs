@@ -14,13 +14,19 @@ namespace ConsoleMef2
             set;
         } = " ";
 
+        public string Status
+        {
+            get;
+            set;
+        } = "";
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="msg"></param>
         public void WriteInfo(string msg)
         {
-            System.Diagnostics.Debug.WriteLine(Header + msg);
+            System.Diagnostics.Debug.WriteLine(Header + msg + Status);
         }
     }
 }

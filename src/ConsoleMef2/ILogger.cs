@@ -13,6 +13,12 @@ namespace ConsoleMef2
             get;
             set;
         }
+
+        string Status
+        {
+            get;
+            set;
+        }
         
         void WriteInfo(string msg);
     }

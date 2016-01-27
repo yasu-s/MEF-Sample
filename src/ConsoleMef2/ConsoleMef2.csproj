@@ -73,6 +73,11 @@
     <Compile Include="LogImportAttribute.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scope.cs" />
+    <Compile Include="ShareChild.cs" />
+    <Compile Include="ShareFactory.cs" />
+    <Compile Include="ShareTest.cs" />
+    <Compile Include="ShareParent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

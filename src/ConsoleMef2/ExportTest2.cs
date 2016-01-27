@@ -10,6 +10,13 @@ namespace ConsoleMef2
     [Export("test2", typeof(ITest))]
     public class ExportTest2 : ITest
     {
+        [LogImport("Debug"),SharingBoundary("SharedTest")]
+        public ILogger DebugLogger
+        {
+            get;
+            set;
+        }
+
         public string GetName()
         {
             return "ExportTest2";
